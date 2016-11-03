@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt2381991/?ref_=fn_ft_tt_1",
+    "title" : "The Huntsman & the Ice Queen",
+    "year" : "2016",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "Eric and fellow warrior Sara, raised as members of ice Queen Freya's army, try to conceal their forbidden love as they fight to survive the wicked intentions of both Freya and her sister Ravenna.",
+    "budget" : "$115,000,000",
+    "gross" : "$47,952,020",
+    "ratingValue" : "6.1",
+    "ratingCount" : "51,751",
+    "duration" : "1h 54min",
+    "castList" : [
+      "Chris Hemsworth",
+      "Charlize Theron",
+      "Jessica Chastain",
+      "Emily Blunt",
+      "Nick Frost",
+      "Rob Brydon",
+      "Sheridan Smith",
+      "Alexandra Roach",
+      "Sope Dirisu",
+      "Sam Hazeldine",
+      "Sam Claflin",
+      "Sophie Cookson",
+      "Conrad Khan",
+      "Niamh Walter",
+      "Nana Agyeman-Bediako"
+    ],
+    "characterList" : [
+      "The Huntsman / Eric",
+      "Ravenna",
+      "Sara",
+      "Queen Freya",
+      "Nion",
+      "Gryff",
+      "Mrs. Bromwyn",
+      "Doreena",
+      "Tull",
+      "Leifr",
+      "William",
+      "Pippa",
+      "Young Eric",
+      "Young Sara",
+      "Young Tull"
+    ]
+  }
+]

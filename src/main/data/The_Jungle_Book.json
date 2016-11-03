@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt3040964/?ref_=fn_ft_tt_1",
+    "title" : "The Jungle Book",
+    "year" : "2016",
+    "genreList" : [
+      "Adventure",
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "UK",
+      "USA"
+    ],
+    "description" : "The man-cub Mowgli flees the jungle after a threat from the tiger Shere Khan. Guided by Bagheera the panther and the bear Baloo, Mowgli embarks on a journey of self-discovery, though he also meets creatures who don't have his best interests at heart. Written by Anonymous",
+    "budget" : "$175,000,000",
+    "gross" : "$363,995,937",
+    "ratingValue" : "7.6",
+    "ratingCount" : "150,322",
+    "duration" : "1h 46min",
+    "castList" : [
+      "Neel Sethi",
+      "Bill Murray",
+      "Ben Kingsley",
+      "Idris Elba",
+      "Lupita Nyong'o",
+      "Scarlett Johansson",
+      "Giancarlo Esposito",
+      "Christopher Walken",
+      "Garry Shandling",
+      "Brighton Rose",
+      "Emjay Anthony",
+      "Max Favreau",
+      "Chloe Hechter",
+      "Asher Blinkoff",
+      "Knox Gagnon"
+    ],
+    "characterList" : [
+      "Mowgli",
+      "Baloo (voice)",
+      "Bagheera (voice)",
+      "Shere Khan (voice)",
+      "Raksha (voice)",
+      "Kaa (voice)",
+      "Akela (voice)",
+      "King Louie (voice)",
+      "Ikki (voice)",
+      "Gray (voice)",
+      "Young Wolf (voice)",
+      "Young Wolf (voice)",
+      "Young Wolf (voice)",
+      "Young Wolf (voice)",
+      "Young Wolf (voice)"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0372183/?ref_=fn_ft_tt_1",
+    "title" : "Die Bourne Verschwörung",
+    "year" : "2004",
+    "genreList" : [
+      "Action",
+      "Mystery",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA",
+      "Germany"
+    ],
+    "description" : "After escaping from the emotional and physical pain he previously encountered. Jason Bourne and his girlfriend Marie begin a new life as far away as possible. But when an assassination attempt on Bourne goes horribly wrong, Bourne must re-enter the life he wanted to leave behind, in order to find out the truth why they are still after him. Written by Film_Fan",
+    "budget" : "$75,000,000",
+    "gross" : "$176,049,130",
+    "ratingValue" : "7.8",
+    "ratingCount" : "356,880",
+    "duration" : "1h 48min",
+    "castList" : [
+      "Matt Damon",
+      "Franka Potente",
+      "Brian Cox",
+      "Julia Stiles",
+      "Karl Urban",
+      "Gabriel Mann",
+      "Joan Allen",
+      "Marton Csokas",
+      "Tom Gallop",
+      "John Bedford Lloyd",
+      "Ethan Sandler",
+      "Michelle Monaghan",
+      "Karel Roden",
+      "Tomas Arana",
+      "Oksana Akinshina"
+    ],
+    "characterList" : [
+      "Jason Bourne",
+      "Marie",
+      "Ward Abbott",
+      "Nicky",
+      "Kirill",
+      "Danny Zorn",
+      "Pamela Landy",
+      "Jarda",
+      "Tom Cronin",
+      "Teddy",
+      "Kurt",
+      "Kim",
+      "Gretkov",
+      "Martin Marshall",
+      "Irena Neski"
+    ]
+  }
+]

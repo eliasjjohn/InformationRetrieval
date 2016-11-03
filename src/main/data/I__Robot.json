@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0343818/?ref_=fn_ft_tt_1",
+    "title" : "I, Robot",
+    "year" : "2004",
+    "genreList" : [
+      "Action",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA",
+      "Germany"
+    ],
+    "description" : "In 2035, technophobic homicide detective Del Spooner of the Chicago PD heads the investigation of the apparent suicide of leading robotics scientist, Dr. Alfred Lanning. Unconvinced of the motive, Spooner's investigation into Lanning's death reveals a trail of secrets and agendas within the USR (United States Robotics) corporation and suspicions of murder. Little does he know that his investigation would lead to uncovering a larger threat to humanity.",
+    "budget" : "$52,179,887 (USA)",
+    "gross" : ", ,",
+    "ratingValue" : "7.1",
+    "ratingCount" : "394,631",
+    "duration" : "1h 55min",
+    "castList" : [
+      "Will Smith",
+      "Bridget Moynahan",
+      "Alan Tudyk",
+      "James Cromwell",
+      "Bruce Greenwood",
+      "Adrian Ricard",
+      "Chi McBride",
+      "Jerry Wasserman",
+      "Fiona Hogan",
+      "Peter Shinkoda",
+      "Terry Chen",
+      "David Haysom",
+      "Scott Heindl",
+      "Sharon Wilkins",
+      "Craig March"
+    ],
+    "characterList" : [
+      "Del Spooner",
+      "Susan Calvin",
+      "Sonny",
+      "Dr. Alfred Lanning",
+      "Lawrence Robertson",
+      "Granny (as Adrian L. Ricard)",
+      "Lt. John Bergin",
+      "Baldez",
+      "V.I.K.I.",
+      "Chin",
+      "Chin",
+      "NS4 Robot / NS5 Robot",
+      "NS4 Robot / NS5 Robot",
+      "Asthmatic Woman",
+      "Detective"
+    ]
+  }
+]

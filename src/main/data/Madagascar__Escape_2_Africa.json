@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0479952/?ref_=fn_ft_tt_1",
+    "title" : "Madagascar 2",
+    "year" : "2008",
+    "genreList" : [
+      "Animation",
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "The sequel to 2005's \"Madagascar\", in which New York Zoo animals, Alex the Lion, Marty the Zebra, Melman the Giraffe and Gloria the Hippo, still stranded on Madagascar, start to leave the island. All of a sudden, they land in the wilderness of Africa, where Alex meets the rest of his family, but has trouble communicating with them after spending so much time at the Central Park Zoo. Written by rocknrollunderdawg",
+    "budget" : "$63,106,589 (USA)",
+    "gross" : ",",
+    "ratingValue" : "6.7",
+    "ratingCount" : "149,078",
+    "duration" : "1h 29min",
+    "castList" : [
+      "Ben Stiller",
+      "Chris Rock",
+      "David Schwimmer",
+      "Jada Pinkett Smith",
+      "Sacha Baron Cohen",
+      "Cedric the Entertainer",
+      "Andy Richter",
+      "Bernie Mac",
+      "Alec Baldwin",
+      "Sherri Shepherd",
+      "Will.i.am",
+      "Elisa Gabrielli",
+      "Tom McGrath",
+      "Chris Miller",
+      "Christopher Knights"
+    ],
+    "characterList" : [
+      "Alex (voice)",
+      "Marty / Additional Zebras (voice)",
+      "Melman (voice)",
+      "Gloria (voice)",
+      "Julien (voice)",
+      "Maurice (voice)",
+      "Mort (voice)",
+      "Zuba (voice)",
+      "Makunga (voice)",
+      "Mom (voice)",
+      "Moto Moto (voice) (as Will.I.Am)",
+      "Nana (voice)",
+      "Skipper / Lemur (voice)",
+      "Kowalski (voice)",
+      "Private (voice)"
+    ]
+  }
+]

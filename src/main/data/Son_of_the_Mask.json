@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0362165/?ref_=fn_ft_tt_1",
+    "title" : "Die Maske 2 - Die nächste Generation",
+    "year" : "2005",
+    "genreList" : [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA",
+      "Germany"
+    ],
+    "description" : "A cartoonist named Tim Avery loves his dog, Otis, more than anything in the world. But when Tim and his wife have a baby, Otis starts to feel left out. But then Otis finds an enchanted mask and plots to be rid of the baby once and for all, but is unsuccessful. Meanwhile, up in Valhalla, Odin is infuriated at Loki for losing the mask and orders him to go get it... Written by Josh f.",
+    "budget" : "$84,000,000",
+    "gross" : "$17,010,646",
+    "ratingValue" : "2.2",
+    "ratingCount" : "41,421",
+    "duration" : "1h 34min",
+    "castList" : [
+      "Jamie Kennedy",
+      "Alan Cumming",
+      "Liam Falconer",
+      "Ryan Falconer",
+      "Traylor Howard",
+      "Steven Wright",
+      "Kal Penn",
+      "Ben Stein",
+      "Brett Pickup",
+      "Peter Callan",
+      "Ashley Lyons",
+      "Wayne McDaniel",
+      "Sandy Winton",
+      "Rebecca Massey",
+      "Issac Longmuir"
+    ],
+    "characterList" : [
+      "Tim Avery",
+      "Loki",
+      "Alvey",
+      "Alvey",
+      "Tonya Avery",
+      "Daniel Moss",
+      "Jorge",
+      "Dr. Neuman",
+      "Museum Boy",
+      "Museum Redneck",
+      "Museum Security Guard",
+      "Museum Person",
+      "Chris",
+      "Clare",
+      "Chris & Clare's Child"
+    ]
+  }
+]

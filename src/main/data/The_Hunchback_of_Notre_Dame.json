@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0116583/?ref_=fn_ft_tt_1",
+    "title" : "Der Glöckner von Notre Dame",
+    "year" : "1996",
+    "genreList" : [
+      "Animation",
+      "Drama",
+      "Family",
+      "Musical",
+      "Romance"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "In 15th century Paris, Clopin the puppeteer tells the story of Quasimodo, the misshapen but gentle-souled bell ringer of Notre Dame, who was nearly killed as a baby by Claude Frollo, the Minister of Justice. But Frollo was forced by the Archdeacon of Notre Dame to raise Quasimodo as his own. Now a young man, Quasimodo is hidden from the world by Frollo in the belltower of the cathedral. But during the Festival of Fools, Quasimodo, cheered on by his gargoyle friends Victor, Hugo, and Laverne, decides to take part in the festivities, where he meets the lovely gypsy girl Esmeralda and the handsome soldier Phoebus. The three of them find themselves ranged against Frollo's cruelty and his attempts to destroy the home of the gypsies, the Court of Miracles. And Quasimodo must desperately defend both Esmeralda and the very cathedral of Notre Dame. Written by Kathy Li",
+    "budget" : "£1,143,349 (UK)",
+    "gross" : ",",
+    "ratingValue" : "6.9",
+    "ratingCount" : "105,126",
+    "duration" : "1h 31min",
+    "castList" : [
+      "Jason Alexander",
+      "Tom Hulce",
+      "Mary Kay Bergman",
+      "Demi Moore",
+      "Corey Burton",
+      "Jim Cummings",
+      "Bill Fagerbakke",
+      "Tony Jay",
+      "Paul Kandel",
+      "Charles Kimbrough",
+      "Kevin Kline",
+      "Heidi Mollenhauer",
+      "Patrick Pinney",
+      "Gary Trousdale",
+      "David Ogden Stiers"
+    ],
+    "characterList" : [
+      "Hugo (voice)",
+      "Quasimodo (voice)",
+      "Quasimodo's Mother (voice)",
+      "Esmeralda (voice)",
+      "Brutish Guard (voice)",
+      "Guards / Gypsies (voice)",
+      "Oafish Guard (voice)",
+      "Frollo (voice)",
+      "Clopin (voice)",
+      "Victor (voice)",
+      "Phoebus (voice)",
+      "Esmeralda (singing voice)",
+      "Guards / Gypsies (voice)",
+      "The Old Heretic (voice)",
+      "Archdeacon (voice)"
+    ]
+  }
+]

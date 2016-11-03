@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0120917/?ref_=fn_ft_tt_1",
+    "title" : "Ein Königreich für ein Lama",
+    "year" : "2000",
+    "genreList" : [
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "In this animated comedy from the folks at Disney, the vain and cocky Emperor Kuzco is a very busy man. Besides maintaining his \"groove\", and firing his suspicious administrator, Yzma; he's also planning to build a new waterpark just for himself for his birthday. However, this means destroying one of the villages in his kingdom. Meanwhile, Yzma is hatching a plan to get revenge and usurp the throne. But, in a botched assassination courtesy of Yzma's right-hand man, Kronk, Kuzco is magically transformed into a llama. Now, Kuzco finds himself the property of Pacha, a lowly llama herder whose home is ground zero for the water park. Upon discovering the llama's true self, Pacha offers to help resolve the Emperor's problem and regain his throne, only if he promises to move his water park. Written by Richard Hudson",
+    "budget" : "$9,812,302 (USA)",
+    "gross" : ",",
+    "ratingValue" : "7.3",
+    "ratingCount" : "130,939",
+    "duration" : "1h 18min",
+    "castList" : [
+      "David Spade",
+      "John Goodman",
+      "Eartha Kitt",
+      "Patrick Warburton",
+      "Wendie Malick",
+      "Kellyann Kelso",
+      "Eli Russell Linnetz",
+      "Tom Jones",
+      "Stephen J. Anderson",
+      "Bob Bergen",
+      "Rodger Bumpass",
+      "Robert Clotworthy",
+      "Jennifer Darling",
+      "Patti Deutsch",
+      "John Fiedler"
+    ],
+    "characterList" : [
+      "Emperor Kuzco / Narrator (voice)",
+      "Pacha (voice)",
+      "Yzma (voice)",
+      "Kronk, Yzma's Sidekick (voice)",
+      "Chicha, Pacha's Wife (voice)",
+      "Chaca, Pacha's Daughter (voice)",
+      "Tipo, Pacha's Son (voice)",
+      "Theme Song Guy (voice)",
+      "(voice) (as Stephen Anderson)",
+      "Bucky the Squirrel (voice)",
+      "(voice)",
+      "(voice)",
+      "(voice)",
+      "Waitress (voice)",
+      "Old Man (voice)"
+    ]
+  }
+]

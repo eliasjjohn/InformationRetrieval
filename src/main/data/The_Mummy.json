@@ -1,0 +1,55 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt2345759/?ref_=fn_ft_tt_1",
+    "title" : "The Mummy",
+    "year" : "2017",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "Though safely entombed in a crypt deep beneath the unforgiving desert, an ancient queen whose destiny was unjustly taken from her is awakened in our current day, bringing with her malevolence grown over millennia, and terrors that defy human comprehension. Written by Universal Pictures",
+    "budget" : "Show detailed on  »",
+    "gross" : "2.35 : 1",
+    "ratingValue" : "0",
+    "ratingCount" : "0",
+    "duration" : null,
+    "castList" : [
+      "Sofia Boutella",
+      "Tom Cruise",
+      "Annabelle Wallis",
+      "Russell Crowe",
+      "Jake Johnson",
+      "Javier Botet",
+      "Courtney B. Vance",
+      "Marwan Kenzari",
+      "Shina Shihoko Nagai",
+      "Jason Matthewson",
+      "Selva Rasalingam",
+      "Solomon Taiwo Justified",
+      "Tyrone Love",
+      "Dylan Smith",
+      "Bella Ava Georgiou"
+    ],
+    "characterList" : [
+      "Mummy",
+      "Tyler Colt",
+      "Jenny Halsey",
+      "Dr. Henry Jekyll",
+      "",
+      "Set",
+      "Colonel Gideon Forster",
+      "",
+      "Museum Tourist",
+      "Museum Guy",
+      "King Menehptre",
+      "Tourist",
+      "Prodigium Agent",
+      "",
+      "Fourth Technician"
+    ]
+  }
+]

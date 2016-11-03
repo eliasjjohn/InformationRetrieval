@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0171363/?ref_=fn_ft_tt_1",
+    "title" : "Das Geisterschloß",
+    "year" : "1999",
+    "genreList" : [
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "A remake of the classic 1963 movie \"The Haunting\" about a team of paranormal experts who look into strange occurrences in an ill-fated house. Through the course of the night some will unravel, some will question, and all will fight for their lives as the house fights back. Written by PofRules",
+    "budget" : "$33,435,140 (USA)",
+    "gross" : ",",
+    "ratingValue" : "4.9",
+    "ratingCount" : "59,633",
+    "duration" : "1h 53min",
+    "castList" : [
+      "Liam Neeson",
+      "Catherine Zeta-Jones",
+      "Owen Wilson",
+      "Lili Taylor",
+      "Bruce Dern",
+      "Marian Seldes",
+      "Alix Koromzay",
+      "Todd Field",
+      "Virginia Madsen",
+      "Michael Cavanaugh",
+      "Tom Irwin",
+      "Charles Gunning",
+      "Saul Priever",
+      "M.C. Gainey",
+      "Hadley Eure"
+    ],
+    "characterList" : [
+      "Dr. David Marrow",
+      "Theo",
+      "Luke Sanderson",
+      "Nell",
+      "Mr. Dudley",
+      "Mrs. Dudley",
+      "Mary Lambetta",
+      "Todd Hackett",
+      "Jane",
+      "Dr. Malcolm Keogh",
+      "Lou",
+      "Hugh Crain",
+      "Ritchie",
+      "Large Man",
+      "Carolyn Crain"
+    ]
+  }
+]

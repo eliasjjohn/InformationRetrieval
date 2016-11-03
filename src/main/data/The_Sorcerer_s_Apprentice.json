@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0963966/?ref_=fn_ft_tt_1",
+    "title" : "Duell der Magier",
+    "year" : "2010",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "Balthazar Blake (Nicolas Cage) is a master sorcerer in modern-day Manhattan trying to defend the city from his arch-nemesis, Maxim Horvath (Alfred Molina). Balthazar can't do it alone, so he recruits Dave Stutler (Jay Baruchel), a seemingly average guy who demonstrates hidden potential, as his reluctant protégé. The sorcerer gives his unwilling accomplice a crash course in the art and science of magic, and together, these unlikely partners work to stop the forces of darkness. It'll take all the courage Dave can muster to survive his training, save the city and get the girl as he becomes The Sorcerer's Apprentice. Written by Walt Disney Pictures",
+    "budget" : "$150,000,000",
+    "gross" : "$63,143,812",
+    "ratingValue" : "6.1",
+    "ratingCount" : "126,070",
+    "duration" : "1h 49min",
+    "castList" : [
+      "Nicolas Cage",
+      "Jay Baruchel",
+      "Alfred Molina",
+      "Teresa Palmer",
+      "Toby Kebbell",
+      "Omar Benson Miller",
+      "Monica Bellucci",
+      "Alice Krige",
+      "Jake Cherry",
+      "James A. Stephens",
+      "Gregory Woo",
+      "Wai Ching Ho",
+      "Jason R. Moore",
+      "Robert Capron",
+      "Peyton List"
+    ],
+    "characterList" : [
+      "Balthazar",
+      "Dave",
+      "Horvath",
+      "Becky",
+      "Drake Stone",
+      "Bennet",
+      "Veronica",
+      "Morgana",
+      "Young Dave",
+      "Merlin",
+      "Sun-Lok",
+      "Chinese Woman",
+      "Subway Mugger (as Jason Moore)",
+      "Young Dave's Pal (as Robert B. Capron)",
+      "Young Becky (as Peyton Roi List)"
+    ]
+  }
+]

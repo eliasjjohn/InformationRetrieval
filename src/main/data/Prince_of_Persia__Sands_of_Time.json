@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0473075/?ref_=fn_ft_tt_1",
+    "title" : "Prince of Persia: Der Sand der Zeit",
+    "year" : "2010",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Romance"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "Set in the mystical lands of Persia, a rogue prince and a mysterious princess race against dark forces to safeguard an ancient dagger capable of releasing the Sands of Time -- a gift from the gods that can reverse time and allow its possessor to rule the world. Written by Walt Disney Pictures",
+    "budget" : "$200,000,000",
+    "gross" : "$90,755,643",
+    "ratingValue" : "6.6",
+    "ratingCount" : "225,556",
+    "duration" : "1h 56min",
+    "castList" : [
+      "Jake Gyllenhaal",
+      "Gemma Arterton",
+      "Ben Kingsley",
+      "Alfred Molina",
+      "Steve Toussaint",
+      "Toby Kebbell",
+      "Richard Coyle",
+      "Ronald Pickup",
+      "Reece Ritchie",
+      "Gísli Örn Garðarsson",
+      "Claudio Pacifico",
+      "Thomas DuPont",
+      "Dave Pope",
+      "Domonkos Pardanyi",
+      "Massimilano Ubaldi"
+    ],
+    "characterList" : [
+      "Dastan",
+      "Tamina",
+      "Nizam",
+      "Sheik Amar",
+      "Seso",
+      "Garsiv",
+      "Tus",
+      "King Sharaman",
+      "Bis",
+      "Hassansin Leader",
+      "Hassansin Porcupine",
+      "Hassansin Whip Man",
+      "Hassansin Giant Scimitar",
+      "Hassansin Double-Bladed Halberd",
+      "Hassansin Long Razor"
+    ]
+  }
+]

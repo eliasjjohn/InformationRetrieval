@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt1440129/?ref_=fn_ft_tt_1",
+    "title" : "Battleship",
+    "year" : "2012",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "A naval war ship encounters an alien armada and faces the biggest threat mankind has ever faced. If they lose, the world could face a major extinction event and an alien invasion. Will humans win this alien war, what are the aliens doing here, and what do they want? Based on the Hasbro naval war game.",
+    "budget" : "$209,000,000",
+    "gross" : "$65,173,160",
+    "ratingValue" : "5.9",
+    "ratingCount" : "204,618",
+    "duration" : "2h 11min",
+    "castList" : [
+      "Taylor Kitsch",
+      "Alexander Skarsgård",
+      "Rihanna",
+      "Brooklyn Decker",
+      "Tadanobu Asano",
+      "Hamish Linklater",
+      "Liam Neeson",
+      "Peter MacNicol",
+      "John Tui",
+      "Jesse Plemons",
+      "Gregory D. Gadson",
+      "Jerry Ferrara",
+      "Adam Godley",
+      "Rico McClinton",
+      "Joji Yoshida"
+    ],
+    "characterList" : [
+      "Lieutenant Alex Hopper",
+      "Commander Stone Hopper",
+      "Petty Officer Cora 'Weps' Raikes",
+      "Sam",
+      "Captain Yugi Nagata",
+      "Cal Zapata",
+      "Admiral Shane",
+      "Secretary of Defense",
+      "Chief Petty Officer Walter 'The Beast' Lynch",
+      "Boatswain Mate Seaman Jimmy 'Ordy' Ord",
+      "Lieutenant Colonel Mick Canales",
+      "Sampson JOOD Strodell",
+      "Dr. Nogrady",
+      "Captain Browley",
+      "Chief Engineer Hiroki"
+    ]
+  }
+]

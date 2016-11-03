@@ -1,0 +1,57 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt1289401/?ref_=fn_ft_tt_1",
+    "title" : "Ghostbusters",
+    "year" : "2016",
+    "genreList" : [
+      "Action",
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "countryList" : [
+      "USA",
+      "Australia"
+    ],
+    "description" : "Following a ghost invasion of Manhattan, paranormal enthusiasts Erin Gilbert and Abby Yates, nuclear engineer Jillian Holtzmann, and subway worker Patty Tolan band together to stop the otherworldly threat.",
+    "budget" : "$144,000,000",
+    "gross" : "$128,312,763",
+    "ratingValue" : "5.4",
+    "ratingCount" : "109,644",
+    "duration" : "1h 56min",
+    "castList" : [
+      "Zach Woods",
+      "Kristen Wiig",
+      "Ed Begley Jr.",
+      "Charles Dance",
+      "John Milhiser",
+      "Ben Harris",
+      "Melissa McCarthy",
+      "Karan Soni",
+      "Kate McKinnon",
+      "Bess Rous",
+      "Steve Higgins",
+      "Leslie Jones",
+      "Neil Casey",
+      "Dave Allen",
+      "Katie Dippold"
+    ],
+    "characterList" : [
+      "Tour Guide",
+      "Erin Gilbert",
+      "Ed Mulgrave",
+      "Harold Filmore",
+      "Higgins Student",
+      "Higgins Student",
+      "Abby Yates",
+      "Bennie",
+      "Jillian Holtzmann",
+      "Gertrude Aldridge Ghost",
+      "Dean",
+      "Patty Tolan",
+      "Rowan North",
+      "Electrocuted Ghost (as Dave Gruber Allen)",
+      "Rental Agent"
+    ]
+  }
+]

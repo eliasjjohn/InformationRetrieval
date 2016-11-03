@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0327850/?ref_=fn_ft_tt_1",
+    "title" : "Welcome to the Jungle",
+    "year" : "2003",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "The Rock as a bounty hunter who attempts to square a debt by heading to the Amazon jungle to capture someone. The bounty hunter discovers that his quarry isn't the bad guy he'd been warned about, and the two team up in pursuit of riches stored in a mine in the Amazon. Written by Me",
+    "budget" : "$85,000,000",
+    "gross" : "$47,592,825",
+    "ratingValue" : "6.7",
+    "ratingCount" : "83,687",
+    "duration" : "1h 44min",
+    "castList" : [
+      "Dwayne Johnson",
+      "Seann William Scott",
+      "Rosario Dawson",
+      "Christopher Walken",
+      "Ewen Bremner",
+      "Jon Gries",
+      "William Lucking",
+      "Ernie Reyes Jr.",
+      "Stuart F. Wilson",
+      "Dennis Keiffer",
+      "Garrett Warren",
+      "Toby Holguin",
+      "Paul S. Power",
+      "Stephen Bishop",
+      "Chuck Norman"
+    ],
+    "characterList" : [
+      "Beck (as The Rock)",
+      "Travis",
+      "Mariana",
+      "Hatcher",
+      "Declan",
+      "Harvey",
+      "Walker",
+      "Manito",
+      "Swenson",
+      "Naylor",
+      "Henshaw",
+      "Head Indian Tracker",
+      "Martin (as Paul Power)",
+      "Knappmiller",
+      "Mullaire"
+    ]
+  }
+]

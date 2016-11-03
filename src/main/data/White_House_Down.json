@@ -1,0 +1,55 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt2334879/?ref_=fn_ft_tt_1",
+    "title" : "White House Down",
+    "year" : "2013",
+    "genreList" : [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "Capitol Policeman John Cale has just been denied his dream job with the Secret Service of protecting President James Sawyer. Not wanting to let down his little girl with the news, he takes her on a tour of the White House, when the complex is overtaken by a heavily armed paramilitary group. Now, with the nation's government falling into chaos and time running out, it's up to Cale to save the president, his daughter, and the country. Written by Columbia Pictures",
+    "budget" : "$150,000,000",
+    "gross" : "$73,103,784",
+    "ratingValue" : "6.4",
+    "ratingCount" : "167,281",
+    "duration" : "2h 11min",
+    "castList" : [
+      "Channing Tatum",
+      "Jamie Foxx",
+      "Maggie Gyllenhaal",
+      "Jason Clarke",
+      "Richard Jenkins",
+      "Joey King",
+      "James Woods",
+      "Nicolas Wright",
+      "Jimmi Simpson",
+      "Michael Murphy",
+      "Rachelle Lefevre",
+      "Lance Reddick",
+      "Matt Craven",
+      "Jake Weber",
+      "Peter Jacobson"
+    ],
+    "characterList" : [
+      "Cale",
+      "President Sawyer",
+      "Finnerty",
+      "Stenz",
+      "Raphelson",
+      "Emily",
+      "Walker",
+      "Donnie the Guide",
+      "Tyler",
+      "Vice President Hammond",
+      "Melanie",
+      "General Caulfield",
+      "Agent Kellerman",
+      "Agent Hope",
+      "Wallace"
+    ]
+  }
+]

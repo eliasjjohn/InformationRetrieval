@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0117998/?ref_=fn_ft_tt_1",
+    "title" : "Twister",
+    "year" : "1996",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Thriller"
+    ],
+    "countryList" : [
+      "USA"
+    ],
+    "description" : "TV weatherman Bill Harding is trying to get his tornado-hunter wife, Jo, to sign divorce papers so he can marry his girlfriend Melissa. But Mother Nature, in the form of a series of intense storms sweeping across Oklahoma, has other plans. Soon the three have joined the team of stormchasers as they attempt to insert a revolutionary measuring device into the very heart of several extremely violent tornados. Written by Martin H. Booda <booda@datasync.com>",
+    "budget" : "$92,000,000",
+    "gross" : "$241,688,385",
+    "ratingValue" : "6.3",
+    "ratingCount" : "145,415",
+    "duration" : "1h 53min",
+    "castList" : [
+      "Helen Hunt",
+      "Bill Paxton",
+      "Cary Elwes",
+      "Jami Gertz",
+      "Philip Seymour Hoffman",
+      "Lois Smith",
+      "Alan Ruck",
+      "Sean Whalen",
+      "Scott Thomson",
+      "Todd Field",
+      "Joey Slotnick",
+      "Wendle Josepher",
+      "Jeremy Davies",
+      "Zach Grenier",
+      "Gregory Sporleder"
+    ],
+    "characterList" : [
+      "Dr. Jo Harding",
+      "Bill Harding",
+      "Dr. Jonas Miller",
+      "Dr. Melissa Reeves",
+      "Dustin Davis",
+      "Meg Greene",
+      "Robert 'Rabbit' Nurick",
+      "Allan Sanders",
+      "Jason 'Preacher' Rowe",
+      "Tim 'Beltzer' Lewis",
+      "Joey",
+      "Haynes",
+      "Laurence",
+      "Eddie",
+      "Willie"
+    ]
+  }
+]

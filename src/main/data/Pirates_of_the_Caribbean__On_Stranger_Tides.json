@@ -1,0 +1,56 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt1298650/?ref_=fn_ft_tt_1",
+    "title" : "Pirates of the Caribbean - Fremde Gezeiten",
+    "year" : "2011",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "countryList" : [
+      "USA",
+      "UK"
+    ],
+    "description" : "Captain Jack Sparrow (Depp) crosses paths with a woman from his past (Cruz), and he's not sure if it's love -- or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth. When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard (McShane), Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past. Written by Walt Disney Pictures",
+    "budget" : "$250,000,000",
+    "gross" : "$241,063,875",
+    "ratingValue" : "6.7",
+    "ratingCount" : "377,324",
+    "duration" : "2h 16min",
+    "castList" : [
+      "Johnny Depp",
+      "Penélope Cruz",
+      "Geoffrey Rush",
+      "Ian McShane",
+      "Kevin McNally",
+      "Sam Claflin",
+      "Astrid Bergès-Frisbey",
+      "Stephen Graham",
+      "Keith Richards",
+      "Richard Griffiths",
+      "Jonny Rees",
+      "Damian O'Hare",
+      "Óscar Jaenada",
+      "Anton Lesser",
+      "Roger Allam"
+    ],
+    "characterList" : [
+      "Jack Sparrow",
+      "Angelica",
+      "Barbossa",
+      "Blackbeard",
+      "Gibbs",
+      "Philip",
+      "Syrena",
+      "Scrum",
+      "Captain Teague",
+      "King George",
+      "Groves (as Greg Ellis)",
+      "Gillette",
+      "The Spaniard",
+      "Lord John Carteret",
+      "Prime Minister Henry Pelham"
+    ]
+  }
+]

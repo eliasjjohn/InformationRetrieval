@@ -1,0 +1,58 @@
+[
+  {
+    "url" : "http://akas.imdb.com/title/tt0411477/?ref_=fn_ft_tt_1",
+    "title" : "Hellboy 2 - Die goldene Armee",
+    "year" : "2008",
+    "genreList" : [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "countryList" : [
+      "USA",
+      "Germany"
+    ],
+    "description" : "In this continuation to the adventure of the demon superhero, an evil elf breaks an ancient pact between humans and creatures, as he declares war against humanity. He is on a mission to release The Golden Army, a deadly group of fighting machines that can destroy the human race. As Hell on Earth is ready to erupt, Hellboy and his crew set out to defeat the evil prince before The Golden Army can destroy humanity's existence. Written by ctfabian",
+    "budget" : "$85,000,000",
+    "gross" : "$75,754,670",
+    "ratingValue" : "7.0",
+    "ratingCount" : "210,756",
+    "duration" : "2h",
+    "castList" : [
+      "Ron Perlman",
+      "Selma Blair",
+      "Doug Jones",
+      "John Alexander",
+      "James Dodd",
+      "Seth MacFarlane",
+      "Luke Goss",
+      "Anna Walton",
+      "Jeffrey Tambor",
+      "John Hurt",
+      "Brian Steele",
+      "Andrew Hefler",
+      "Iván Kamarás",
+      "Mike Kelly",
+      "Jeremy Zimmermann"
+    ],
+    "characterList" : [
+      "Hellboy",
+      "Liz Sherman",
+      "Abe Sapien / Chamberlain / Angel of Death",
+      "Johann Krauss / Bethmoora Goblin",
+      "Johann Krauss",
+      "Johann (voice)",
+      "Prince Nuada",
+      "Princess Nuala",
+      "Tom Manning",
+      "Professor Broom",
+      "Wink / Cronie / Spice Shop Troll / Cathedral Head / Fragglewump",
+      "Agent Flint",
+      "Agent Steel",
+      "Agent Marble",
+      "Auctioneer"
+    ]
+  }
+]
