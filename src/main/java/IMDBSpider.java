@@ -47,7 +47,8 @@ public class IMDBSpider {
             throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode m = mapper.readValue(new File(movieListJSON), JsonNode.class);
-        executorService = Executors.newFixedThreadPool(8);
+        Logger.getAnonymousLogger().log(Level.INFO,"Going to use " + Runtime.getRuntime().availableProcessors() + " threads.");
+        executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         m.forEach(f -> writeMovieThreaded(f.get("movie_name").asText(), outputDir));
 
