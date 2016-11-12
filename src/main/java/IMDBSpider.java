@@ -173,6 +173,7 @@ public class IMDBSpider {
                 jGenerator.writeStringField("ratingCount", movie.getRatingCount());
                 jGenerator.writeStringField("duration", movie.getDuration());
                 arrayListToJSONString(jGenerator, "castList", movie.getCastList());
+                arrayListToJSONString(jGenerator, "directorList", movie.getDirectorList());
                 arrayListToJSONString(jGenerator, "characterList", movie.getCharacterList());
 
                 jGenerator.writeEndObject();
