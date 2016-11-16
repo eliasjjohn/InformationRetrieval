@@ -370,7 +370,6 @@ public class IMDBQueries {
     public static void main(String argv[]) throws IOException {
         String moviesPath = "./data/movies/";
 
-        argv = new String[]{"/users/elias.john/git/IR_blatt1/src/main/data/"};
         if (argv.length == 1) {
             moviesPath = argv[0];
         } else if (argv.length != 0) {
