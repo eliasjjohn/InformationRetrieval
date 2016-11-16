@@ -1,8 +1,9 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("static-method")
 public class IMDBQueries {
@@ -43,22 +44,29 @@ public class IMDBQueries {
      */
     public List<Tuple<Movie, String>> queryAllRounder(List<Movie> movies) {
 
-        ArrayList<Tuple<Movie,String>> selectedMovies = new ArrayList<>();
+        List<Tuple<Movie, String>> allrounder = new ArrayList<>();
 
-        for (Movie movie : movies)
-            movie.getDirectorList().forEach(f -> {
-                if (movie.getCastList().contains(f)) selectedMovies.add(new Tuple<>(movie, f));
-            });
+        for (int i=0; i<movies.size();i++) {
+            Movie movie = movies.get(i);
+            List<String> directorList = movie.getDirectorList();
+            for (int j=0; j<directorList.size();j++) {
+                String director = directorList.get(j);
+                if (movie.getCastList().contains(director)) {
+                    Tuple<Movie, String> result = new Tuple<>(movie, director);
+                    allrounder.add(result);
+                    break;
+                }
+            }
+        }
 
-        Collections.sort(selectedMovies, (mov1, mov2) ->
-                mov2.first.getRatingValue().compareTo(mov1.first.getRatingValue()));
+        Collections.sort(allrounder, new Comparator<Tuple<Movie, String>>() {
+            @Override
+            public int compare(Tuple<Movie, String> mov1, Tuple<Movie, String> mov2) {
+                return Float.compare(Float.valueOf(mov2.first.getRatingValue()), Float.valueOf((mov1.first.getRatingValue())));
+            }
+        });
 
-        List<Tuple<Movie, String>> returner = selectedMovies.subList(0,selectedMovies.size()>10?10:selectedMovies.size());
-
-        returner.forEach(f ->
-                System.out.println(f.first.getTitle() + " - " + f.first.getRatingValue() + " - " + f.second));
-
-        return returner;
+        return allrounder.subList(0,10);
     }
 
     /**
@@ -72,8 +80,25 @@ public class IMDBQueries {
      * monetary loss, which is also returned
      */
     public List<Tuple<Movie, Long>> queryUnderTheRadar(List<Movie> movies) {
-        // TODO Basic Query: insert code here
-        return new ArrayList<>();
+
+        ArrayList<Movie> movies1 = movies.stream().filter(movie -> Float.valueOf(movie.getRatingValue()) > 8.0
+                && Integer.valueOf(movie.getRatingCount().replaceAll(",", "")) >= 1000
+                && Short.valueOf(movie.getYear()) <= 2015
+                && movie.getCountryList().contains("USA")).collect(Collectors.toCollection(ArrayList::new));
+
+        movies1.sort((m1, m2) -> {
+
+            Long loss1 = Long.valueOf(m1.getBudget().replaceAll("[^\\d]", ""))
+                    - Long.valueOf(m1.getGross().replaceAll("[^\\d]", ""));
+            Long loss2 = Long.valueOf(m2.getBudget().replaceAll("[^\\d]", ""))
+                    - Long.valueOf(m2.getGross().replaceAll("[^\\d]", ""));
+            return Long.compare(loss1, loss2);
+        });
+
+        List<Tuple<Movie, Long>> returner = new ArrayList<>();
+        movies1.forEach(f -> returner.add(new Tuple<>(f, Math.abs(Long.valueOf(f.getBudget().replaceAll("[^\\d]", ""))
+                - Long.valueOf(f.getGross().replaceAll("[^\\d]", ""))))));
+     return returner.subList(0, 10);
     }
 
     /**
@@ -89,8 +114,49 @@ public class IMDBQueries {
      */
     public List<Tuple<Movie, Integer>> queryPillarsOfStorytelling(
             List<Movie> movies) {
-        // TODO Basic Query: insert code here
-        return new ArrayList<>();
+
+        List<Movie> filtered = movies.stream().filter(new Predicate<Movie>() {
+            @Override
+            public boolean test(Movie f) {
+                String descr = f.getDescription().toLowerCase();
+                return (descr.contains("kill") || descr.contains("love"));
+            }
+        }).collect(Collectors.toList());
+
+        filtered.sort(new Comparator<Movie>() {
+            @Override
+            public int compare(Movie m1, Movie m2) {
+                int count1 = IMDBQueries.this.countSubString(m1.getDescription().toLowerCase(), "kill")
+                        + IMDBQueries.this.countSubString(m1.getDescription().toLowerCase(), "love");
+                int count2 = IMDBQueries.this.countSubString(m2.getDescription().toLowerCase(), "kill")
+                        + IMDBQueries.this.countSubString(m2.getDescription().toLowerCase(), "love");
+                return count2 - count1;
+            }
+        });
+
+        ArrayList<Tuple<Movie, Integer>> returner = new ArrayList<>();
+
+        filtered.subList(0, 10).forEach(new Consumer<Movie>() {
+            @Override
+            public void accept(Movie f) {
+                returner.add(new Tuple<>(f, IMDBQueries.this.countSubString(f.getDescription().toLowerCase(), "kill")
+                        + IMDBQueries.this.countSubString(f.getDescription().toLowerCase(), "love")));
+            }
+        });
+
+        return returner;
+    }
+
+    private int countSubString(String full, String sub) {
+        int index = 0;
+        int count = 0;
+
+        //http://www.java2s.com/Code/Java/Data-Type/Countthenumberofinstancesofsubstringwithinastring.htm
+        while ((index = full.indexOf(sub, index)) != -1) {
+            index++;
+            count++;
+        }
+        return count;
     }
 
     /**
@@ -103,8 +169,18 @@ public class IMDBQueries {
      * publication.
      */
     public List<Movie> queryRedPlanet(List<Movie> movies) {
-        // TODO Basic Query: insert code here
-        return new ArrayList<>();
+        List<Movie> filtered = movies.stream().filter(f ->
+                f.getDescription().contains("Mars") && f.getGenreList().contains("Sci-Fi"))
+                .collect(Collectors.toList());
+
+        filtered.sort((m1, m2) -> {
+            int year1 = Integer.valueOf(m1.getYear());
+            int year2 = Integer.valueOf(m2.getYear());
+            return year1 - year2;
+        });
+
+        return filtered;
+
     }
 
     /**
@@ -117,8 +193,29 @@ public class IMDBQueries {
      * bad IMDB rating, sorted by ascending IMDB rating
      */
     public List<Movie> queryColossalFailure(List<Movie> movies) {
-        // TODO Basic Query: insert code here
-        return new ArrayList<>();
+       return movies.stream().filter(f ->
+                (getDurationAsInt(f)) > 120 &&
+                        Float.valueOf(f.getRatingValue()) < 5.0
+                        && Long.valueOf(f.getBudget().replaceAll("[^\\d]", "")) > 1000000
+                        && f.getCountryList().contains("USA"))
+                .sorted((m1, m2) ->
+                        (Float.compare(Float.valueOf(m1.getRatingValue()),
+                                Float.valueOf(m2.getRatingValue())))).collect(Collectors.toList());
+
+    }
+
+    private int getDurationAsInt(Movie movie) {
+        String durationStr = movie.getDuration().replaceAll("[^\\d ]", "");
+
+        int duration = 0;
+        if (!durationStr.trim().isEmpty()) {
+            String[] durationRaw = durationStr.split(" ");
+            if (durationRaw.length > 0) {
+                if (durationRaw.length >= 1) duration += Integer.valueOf(durationRaw[0]) * 60;
+                if (durationRaw.length == 2) duration += Integer.valueOf(durationRaw[1]);
+            }
+        }
+        return duration;
     }
 
     /**
@@ -131,8 +228,28 @@ public class IMDBQueries {
      * sorted in decreasing order of frequency
      */
     public List<Tuple<String, Integer>> queryUncreativeWriters(List<Movie> movies) {
-        // TODO Impossibly Hard Query: insert code here
-        return new ArrayList<>();
+        ArrayList<Tuple<String, Integer>> returner = new ArrayList<>();
+
+        Map<String, Integer> map = new HashMap<>();
+        movies.forEach(movie -> movie.getCharacterList().forEach(character -> {
+            if (!character.toLowerCase().contains("doctor") &&
+                    !character.toLowerCase().contains("himself") &&
+                    !character.toLowerCase().contains("herself") && character.length()>0) {
+                if (map.containsKey(character)) {
+                     map.put(character, map.get(character) + 1);
+                } else {
+                    map.put(character, 1);
+                }
+            }
+        }));
+
+        map.keySet().forEach(key -> returner.add(new Tuple<>(key, map.get(key))));
+
+        returner.sort((t1, t2) ->
+                Integer.compare(t2.second, t1.second)
+        );
+
+        return returner.subList(0, 10);
     }
 
     /**
@@ -144,8 +261,27 @@ public class IMDBQueries {
      * sorted by the latter.
      */
     public List<Tuple<String, Integer>> queryWorkHorse(List<Movie> movies) {
-        // TODO Impossibly Hard Query: insert code here
-        return new ArrayList<>();
+
+        ArrayList<Tuple<String, Integer>> returner = new ArrayList<>();
+
+        Map<String, Integer> map = new HashMap<>();
+        movies.forEach(movie -> movie.getCastList().forEach(new Consumer<String>() {
+            @Override
+            public void accept(String cast) {
+                if (map.containsKey(cast)) {
+                    map.put(cast, map.get(cast) + 1);
+                } else {
+                    map.put(cast, 1);
+                }
+            }
+        }));
+
+        map.keySet().forEach(key -> returner.add(new Tuple<>(key, map.get(key))));
+
+        returner.sort((t1, t2) -> Integer.compare(t2.second, t1.second)
+        );
+
+        return returner.subList(0, 10);
     }
 
     /**
@@ -157,8 +293,17 @@ public class IMDBQueries {
      * @return best movies by year, starting from 1990 until 2010.
      */
     public List<Movie> queryMustSee(List<Movie> movies) {
-        // TODO Impossibly Hard Query: insert code here
-        return new ArrayList<>();
+        ArrayList<Movie> returner = new ArrayList<>();
+        for (short i = 1990; i <= 2010; i++) {
+            int finalI = i;
+            Movie top = movies.stream().filter(m -> Integer.valueOf(m.getYear()) == finalI &&
+                    Integer.valueOf(m.getRatingCount().replace(",", "")) > 10000)
+                    .sorted((m1, m2) -> Float.compare(Float.valueOf(m2.getRatingValue()), Float.valueOf(m1.getRatingValue())))
+                    .findFirst().orElse(null);
+            if (top != null) returner.add(top);
+
+        }
+        return returner;
     }
 
     /**
@@ -170,8 +315,17 @@ public class IMDBQueries {
      * @return worst movies by year, starting from 1990 till (including) 2010.
      */
     public List<Movie> queryRottenTomatoes(List<Movie> movies) {
-        // TODO Impossibly Hard Query: insert code here
-        return new ArrayList<>();
+        ArrayList<Movie> returner = new ArrayList<>();
+        for (short i = 1990; i <= 2010; i++) {
+            int finalI = i;
+            Movie top = movies.stream().filter(m -> Integer.valueOf(m.getYear()) == finalI &&
+                    Float.valueOf(m.getRatingValue()) > 0f)
+                    .sorted((m1, m2) -> Float.compare(Float.valueOf(m1.getRatingValue()), Float.valueOf(m2.getRatingValue())))
+                    .findFirst().orElse(null);
+            if (top != null) returner.add(top);
+
+        }
+        return returner;
     }
 
     /**
@@ -186,15 +340,37 @@ public class IMDBQueries {
      */
     public List<Tuple<Tuple<String, String>, Integer>> queryMagicCouple(
             List<Movie> movies) {
-        // TODO Impossibly Hard Query: insert code here
-        return new ArrayList<>();
+        ArrayList<Tuple<Tuple<String,String>, Integer>> returner = new ArrayList<>();
+
+        Map<Tuple<String,String>, Integer> map = new HashMap<>();
+        movies.forEach(movie -> {
+            List<String> castList = movie.getCastList();
+            int size = castList.size();
+            for (int i=0;i<size;i++)
+                for (int j=i+1; j<size;j++) {
+                    Tuple<String,String> tuple = new Tuple<>(castList.get(i),castList.get(j));
+                    if (map.containsKey(tuple)) {
+                        map.put(tuple, map.get(tuple) + 1);
+                    } else {
+                        map.put(tuple, 1);
+                    }
+                }
+
+        });
+
+        map.keySet().forEach(key -> returner.add(new Tuple<>(key, map.get(key))));
+
+        returner.sort((t1, t2) ->
+                Integer.compare(t2.second, t1.second));
+
+        return returner.subList(0, 10);
     }
 
 
     public static void main(String argv[]) throws IOException {
         String moviesPath = "./data/movies/";
 
-         argv = new String[] {"/users/elias.john/git/IR_blatt1/src/main/data/"};
+        argv = new String[]{"/users/elias.john/git/IR_blatt1/src/main/data/"};
         if (argv.length == 1) {
             moviesPath = argv[0];
         } else if (argv.length != 0) {

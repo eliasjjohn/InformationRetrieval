@@ -47,7 +47,7 @@ public class IMDBSpider {
             throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode m = mapper.readValue(new File(movieListJSON), JsonNode.class);
-        Logger.getAnonymousLogger().log(Level.INFO,"Going to use " + Runtime.getRuntime().availableProcessors() + " threads.");
+        Logger.getAnonymousLogger().log(Level.INFO, "Going to use " + Runtime.getRuntime().availableProcessors() + " threads.");
         executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         m.forEach(f -> writeMovieThreaded(f.get("movie_name").asText(), outputDir));
@@ -79,7 +79,7 @@ public class IMDBSpider {
     protected void writeMovie(String movieName, String outputDir) {
         try {
             Movie movie = new Movie();
-            Document doc = Jsoup.connect("http://akas.imdb.com/find?q=" + movieName.replaceAll("[^\\x00-\\x7F]", "") + "&s=tt&ttype=ft").ignoreHttpErrors(true).get();
+            Document doc = Jsoup.connect("http://akas.imdb.com/find?q=" + movieName + "&s=tt&ttype=ft").ignoreHttpErrors(true).get();
 
             // Get URL
             Element firstElementInTable = doc.select("td.result_text").first();
@@ -104,11 +104,8 @@ public class IMDBSpider {
                 }
             }
             // Get Director
-            Element director = doc.select("div.credit_summary_item").first();
-            if (director.children().size() > 0)
-                for (int i = 1; i < director.children().size(); i++)
-                    movie.getDirectorList().add(director.select("span[itemprop=name]").text());
-
+            Elements directors = doc.select("div.credit_summary_item > span[itemprop=director]");
+            directors.forEach(d -> movie.getDirectorList().add(d.text().replace(",","")));
 
             // Get Year
             Element year = doc.select("#titleYear").first();
@@ -142,55 +139,58 @@ public class IMDBSpider {
             if (countries != null) countries.forEach(f -> movie.getCountryList().add(f.text()));
 
             // Get Budget and Gross
-            Elements textblocks = details.select("div.txt-block");
-            if (textblocks != null) {
-                if (textblocks.size() >= 7) movie.setBudget(textblocks.get(6).ownText());
-                if (textblocks.size() >= 9) movie.setGross(textblocks.get(8).ownText());
-            }
-
-            System.out.println(movie.toString());
+            Element gross = details.select(":containsOwn(Gross:)").first();
+            Element budget = details.select(":containsOwn(Budget:)").first();
+            if (gross!=null) movie.setBudget(gross.parent().ownText());
+            if (budget!=null) movie.setGross(budget.parent().ownText());
 
 
-            JsonFactory jfactory = new JsonFactory();
-            JsonGenerator jGenerator = null;
-            try {
-                jGenerator = jfactory.createGenerator(new File(
-                        outputDir + "/" + movieName.replaceAll("[^a-zA-Z0-9.-]", "_") + ".json"), JsonEncoding.UTF8);
-                DefaultPrettyPrinter pp = new DefaultPrettyPrinter();
-                pp.indentArraysWith(new DefaultPrettyPrinter.Lf2SpacesIndenter());
-                jGenerator.setPrettyPrinter(pp);
-                jGenerator.writeStartArray();
-                jGenerator.writeStartObject();
-                jGenerator.writeStringField("url", movie.getUrl());
-                jGenerator.writeStringField("title", movie.getTitle());
-                jGenerator.writeStringField("year", movie.getYear());
-                arrayListToJSONString(jGenerator, "genreList", movie.getGenreList());
-                arrayListToJSONString(jGenerator, "countryList", movie.getCountryList());
-                jGenerator.writeStringField("description", movie.getDescription());
-                jGenerator.writeStringField("budget", movie.getBudget());
-                jGenerator.writeStringField("gross", movie.getGross());
-                jGenerator.writeStringField("ratingValue", movie.getRatingValue());
-                jGenerator.writeStringField("ratingCount", movie.getRatingCount());
-                jGenerator.writeStringField("duration", movie.getDuration());
-                arrayListToJSONString(jGenerator, "castList", movie.getCastList());
-                arrayListToJSONString(jGenerator, "directorList", movie.getDirectorList());
-                arrayListToJSONString(jGenerator, "characterList", movie.getCharacterList());
-
-                jGenerator.writeEndObject();
-                jGenerator.writeEndArray();
-                jGenerator.close();
+        System.out.println(movie.toString());
 
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        JsonFactory jfactory = new JsonFactory();
+        JsonGenerator jGenerator = null;
+        try {
+            jGenerator = jfactory.createGenerator(new File(
+                    outputDir + "/" + movieName.replaceAll("[^a-zA-Z0-9.-]", "_") + ".json"), JsonEncoding.UTF8);
+            DefaultPrettyPrinter pp = new DefaultPrettyPrinter();
+            pp.indentArraysWith(new DefaultPrettyPrinter.Lf2SpacesIndenter());
+            jGenerator.setPrettyPrinter(pp);
+            jGenerator.writeStartArray();
+            jGenerator.writeStartObject();
+            jGenerator.writeStringField("url", movie.getUrl());
+            jGenerator.writeStringField("title", movie.getTitle());
+            jGenerator.writeStringField("year", movie.getYear());
+            arrayListToJSONString(jGenerator, "genreList", movie.getGenreList());
+            arrayListToJSONString(jGenerator, "countryList", movie.getCountryList());
+            jGenerator.writeStringField("description", movie.getDescription());
+            jGenerator.writeStringField("budget", movie.getBudget());
+            jGenerator.writeStringField("gross", movie.getGross());
+            jGenerator.writeStringField("ratingValue", movie.getRatingValue());
+            jGenerator.writeStringField("ratingCount", movie.getRatingCount());
+            jGenerator.writeStringField("duration", movie.getDuration());
+            arrayListToJSONString(jGenerator, "castList", movie.getCastList());
+            arrayListToJSONString(jGenerator, "directorList", movie.getDirectorList());
+            arrayListToJSONString(jGenerator, "characterList", movie.getCharacterList());
+
+            jGenerator.writeEndObject();
+            jGenerator.writeEndArray();
+            jGenerator.close();
 
 
-        } catch (Exception e) {
-            Logger.getLogger("IMDBSpider").log(Level.WARNING, "Could not read information for movie: " + movieName, e);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
+
+    } catch(
+    Exception e)
+
+    {
+        Logger.getLogger("IMDBSpider").log(Level.WARNING, "Could not read information for movie: " + movieName, e);
     }
+
+}
 
 
     public static void main(String argv[]) throws IOException {
