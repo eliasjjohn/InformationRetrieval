@@ -1,6 +1,7 @@
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.util.DefaultIndenter;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,7 +48,9 @@ public class IMDBSpider {
             throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode m = mapper.readValue(new File(movieListJSON), JsonNode.class);
-        Logger.getAnonymousLogger().log(Level.INFO, "Going to use " + Runtime.getRuntime().availableProcessors() + " threads.");
+        int threads = Runtime.getRuntime().availableProcessors();
+        if (threads>8) threads=8;
+        Logger.getAnonymousLogger().log(Level.INFO, "Going to use " + threads + " threads.");
         executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         m.forEach(f -> writeMovieThreaded(f.get("movie_name").asText(), outputDir));
@@ -79,7 +82,11 @@ public class IMDBSpider {
     protected void writeMovie(String movieName, String outputDir) {
         try {
             Movie movie = new Movie();
-            Document doc = Jsoup.connect("http://akas.imdb.com/find?q=" + movieName + "&s=tt&ttype=ft").ignoreHttpErrors(true).get();
+            Document doc = Jsoup.connect(
+                    "http://akas.imdb.com/find?q=" +
+                            movieName.replaceAll("[^\\x00-\\x7F]", "") +
+                            "&s=tt&ttype=ft")
+                    .ignoreHttpErrors(true).timeout(10000).get();
 
             // Get URL
             Element firstElementInTable = doc.select("td.result_text").first();
@@ -88,7 +95,7 @@ public class IMDBSpider {
                 movie.setUrl(firstElementInTable.child(0).attr("abs:href"));
             }
 
-            doc = Jsoup.connect(movie.getUrl()).ignoreHttpErrors(true).get();
+            doc = Jsoup.connect(movie.getUrl()).ignoreHttpErrors(true).timeout(10000).get();
 
             // Get Cast
             Element actors = doc.select("table.cast_list").first();
@@ -141,8 +148,8 @@ public class IMDBSpider {
             // Get Budget and Gross
             Element gross = details.select(":containsOwn(Gross:)").first();
             Element budget = details.select(":containsOwn(Budget:)").first();
-            if (gross!=null) movie.setBudget(gross.parent().ownText());
-            if (budget!=null) movie.setGross(budget.parent().ownText());
+            if (budget!=null) movie.setBudget(budget.parent().ownText());
+            if (gross!=null) movie.setGross(gross.parent().ownText());
 
 
         System.out.println(movie.toString());
@@ -154,7 +161,7 @@ public class IMDBSpider {
             jGenerator = jfactory.createGenerator(new File(
                     outputDir + "/" + movieName.replaceAll("[^a-zA-Z0-9.-]", "_") + ".json"), JsonEncoding.UTF8);
             DefaultPrettyPrinter pp = new DefaultPrettyPrinter();
-            pp.indentArraysWith(new DefaultPrettyPrinter.Lf2SpacesIndenter());
+            pp.indentArraysWith( DefaultIndenter.SYSTEM_LINEFEED_INSTANCE );
             jGenerator.setPrettyPrinter(pp);
             jGenerator.writeStartArray();
             jGenerator.writeStartObject();
@@ -183,10 +190,7 @@ public class IMDBSpider {
         }
 
 
-    } catch(
-    Exception e)
-
-    {
+    } catch(Exception e) {
         Logger.getLogger("IMDBSpider").log(Level.WARNING, "Could not read information for movie: " + movieName, e);
     }
 

@@ -84,6 +84,7 @@ public class IMDBQueries {
         ArrayList<Movie> movies1 = movies.stream().filter(movie -> Float.valueOf(movie.getRatingValue()) > 8.0
                 && Integer.valueOf(movie.getRatingCount().replaceAll(",", "")) >= 1000
                 && Short.valueOf(movie.getYear()) <= 2015
+
                 && movie.getCountryList().contains("USA")).collect(Collectors.toCollection(ArrayList::new));
 
         movies1.sort((m1, m2) -> {
@@ -92,7 +93,7 @@ public class IMDBQueries {
                     - Long.valueOf(m1.getGross().replaceAll("[^\\d]", ""));
             Long loss2 = Long.valueOf(m2.getBudget().replaceAll("[^\\d]", ""))
                     - Long.valueOf(m2.getGross().replaceAll("[^\\d]", ""));
-            return Long.compare(loss1, loss2);
+            return Long.compare(loss2, loss1);
         });
 
         List<Tuple<Movie, Long>> returner = new ArrayList<>();
@@ -119,7 +120,7 @@ public class IMDBQueries {
             @Override
             public boolean test(Movie f) {
                 String descr = f.getDescription().toLowerCase();
-                return (descr.contains("kill") || descr.contains("love"));
+                return (descr.contains("kill") && descr.contains("love"));
             }
         }).collect(Collectors.toList());
 
@@ -196,6 +197,7 @@ public class IMDBQueries {
        return movies.stream().filter(f ->
                 (getDurationAsInt(f)) > 120 &&
                         Float.valueOf(f.getRatingValue()) < 5.0
+                        && Float.valueOf(f.getRatingValue())>0
                         && Long.valueOf(f.getBudget().replaceAll("[^\\d]", "")) > 1000000
                         && f.getCountryList().contains("USA"))
                 .sorted((m1, m2) ->
