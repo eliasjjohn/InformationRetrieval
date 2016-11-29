@@ -1,3 +1,5 @@
+package blatt1;
+
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -191,7 +193,7 @@ public class IMDBSpider {
 
 
     } catch(Exception e) {
-        Logger.getLogger("IMDBSpider").log(Level.WARNING, "Could not read information for movie: " + movieName, e);
+        Logger.getLogger("blatt1.IMDBSpider").log(Level.WARNING, "Could not read information for movie: " + movieName, e);
     }
 
 }
@@ -205,7 +207,7 @@ public class IMDBSpider {
             moviesPath = argv[0];
             outputDir = argv[1];
         } else if (argv.length != 0) {
-            System.out.println("Call with: IMDBSpider.jar <moviesPath> <outputDir>");
+            System.out.println("Call with: blatt1.IMDBSpider.jar <moviesPath> <outputDir>");
             System.exit(0);
         }
 

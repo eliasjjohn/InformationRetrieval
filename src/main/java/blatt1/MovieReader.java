@@ -1,3 +1,5 @@
+package blatt1;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -70,13 +72,13 @@ public class MovieReader {
      */
   protected static List<String> getJsonArray(JsonNode m, String key) {
 
-      JsonNode array = m.path(key);
-      List<String> result = new ArrayList<>();
-      for (int i = 0; i<array.size(); i++) {
-        result.add(array.get(i).asText());
-      }
-      return result;
-  }
+        JsonNode array = m.path(key);
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i<array.size(); i++) {
+            result.add(array.get(i).asText());
+        }
+        return result;
+    }
 
     /**
      * A helper function to parse a JSON String.

@@ -1,3 +1,5 @@
+package blatt1;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -375,7 +377,7 @@ public class IMDBQueries {
         if (argv.length == 1) {
             moviesPath = argv[0];
         } else if (argv.length != 0) {
-            System.out.println("Call with: IMDBQueries.jar <moviesPath>");
+            System.out.println("Call with: blatt1.IMDBQueries.jar <moviesPath>");
             System.exit(0);
         }
         System.out.println(moviesPath);
