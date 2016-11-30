@@ -41,7 +41,7 @@ public class BooleanQuery {
      */
     public void buildIndices(String plotFile) {
 
-        Pattern year = Pattern.compile("(\\([1-2][0-9]+\\))");
+        Pattern year = Pattern.compile("(\\([1-2][0-9]+)");
 
         long index = 0;
 
